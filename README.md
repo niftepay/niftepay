@@ -6,7 +6,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/niftepay/niftepay.svg?style=flat-square)](https://packagist.org/packages/niftepay/niftepay)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/zfhassaan/jazzcash.svg?style=flat-square)](https://packagist.org/packages/niftepay/niftepay)
+[![Total Downloads](https://img.shields.io/packagist/dt/zfhassaan/niftepay.svg?style=flat-square)](https://packagist.org/packages/niftepay/niftepay)
 
 
 
@@ -95,15 +95,15 @@ To initiate the hosted checkout process, send a POST request with the following 
 Then, in your controller, use the following code:
 
 ```php
-        $niftepay = new JazzCash();
+        $niftepay = new NiftePay();
         $niftepay->setAmount($request->amount);
         $niftepay->setBillReference($request->billref);
         $niftepay->setProductDescription($request->productDescription);
         return $niftepay->sendRequest();
 ```
-The index function is called and a new instance of the JazzCash class is created. The setAmount, setBillReference, and setProductDescription methods are called on the JazzCash object, passing in the amount, billref, and productDescription values from the request as arguments. These methods set the corresponding properties of the JazzCash object to the specified values.
+The index function is called and a new instance of the NiftePay class is created. The setAmount, setBillReference, and setProductDescription methods are called on the NiftePay object, passing in the amount, billref, and productDescription values from the request as arguments. These methods set the corresponding properties of the NiftePay object to the specified values.
 
-The sendRequest method is called on the JazzCash object. This method sends a request to the JazzCash API to initiate the checkout process and returns the response from the API as an HTML template which can be rendered on the web and mobile application. To hide or show fields, you can use CSS to control the field's visibility on the frontend.
+The sendRequest method is called on the NiftePay object. This method sends a request to the NiftePay API to initiate the checkout process and returns the response from the API as an HTML template which can be rendered on the web and mobile application. To hide or show fields, you can use CSS to control the field's visibility on the frontend.
 
 The response from the API is returned by the index function. This response can be used to display the hosted checkout form on your website or mobile app.
 
